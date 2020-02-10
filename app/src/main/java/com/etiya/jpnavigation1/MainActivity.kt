@@ -35,6 +35,8 @@ class MainActivity : AppCompatActivity() {
 
         setupActionBar(navController, appBarConfig)
         setupNavigationController(navController)
+
+        //Deneme
     }
 
     private fun setupActionBar(
