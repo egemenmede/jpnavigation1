@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/blankFragment">
+
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="com.etiya.jpnavigation1.BlankFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_blank">
+        <action
+            android:id="@+id/action_blankFragment_to_blankFragment2"
+            app:destination="@id/navigation" />
+        <action
+            android:id="@+id/action_blankFragment_to_blankFragment4"
+            app:destination="@id/blankFragment4" />
+        <action
+            android:id="@+id/action_blankFragment_to_optionsMenuFragment"
+            app:destination="@id/optionsMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankFragment4"
+        android:name="com.etiya.jpnavigation1.BlankFragment4"
+        android:label="fragment_blank_fragment4"
+        tools:layout="@layout/fragment_blank_fragment4">
+        <action
+            android:id="@+id/action_blankFragment4_to_blankFragment5"
+            app:destination="@id/blankFragment5" />
+        <argument
+            android:name="nameField"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankFragment5"
+        android:name="com.etiya.jpnavigation1.BlankFragment5"
+        android:label="fragment_blank_fragment5"
+        tools:layout="@layout/fragment_blank_fragment5" />
+    <navigation
+        android:id="@+id/navigation"
+        app:startDestination="@id/blankFragment2">
+        <fragment
+            android:id="@+id/blankFragment2"
+            android:name="com.etiya.jpnavigation1.BlankFragment2"
+            android:label="fragment_blank_fragment2"
+            tools:layout="@layout/fragment_blank_fragment2">
+            <action
+                android:id="@+id/action_blankFragment2_to_blankFragment3"
+                app:destination="@id/blankFragment3" />
+        </fragment>
+        <fragment
+            android:id="@+id/blankFragment3"
+            android:name="com.etiya.jpnavigation1.BlankFragment3"
+            android:label="fragment_blank_fragment3"
+            tools:layout="@layout/fragment_blank_fragment3" />
+    </navigation>
+    <action
+        android:id="@+id/action_global_navigation"
+        app:destination="@id/navigation" />
+    <fragment
+        android:id="@+id/optionsMenuFragment"
+        android:name="com.etiya.jpnavigation1.OptionsMenuFragment"
+        android:label="fragment_options_menu"
+        tools:layout="@layout/fragment_options_menu" />
+</navigation>
