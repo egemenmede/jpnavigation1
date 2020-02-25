@@ -31,9 +31,6 @@
         <argument
             android:name="nameField"
             app:argType="string" />
-        <deepLink
-            android:id="@+id/blankFragment4DeepLink"
-            app:uri="exampleapp://name/{nameField}" />
     </fragment>
     <fragment
         android:id="@+id/blankFragment5"
